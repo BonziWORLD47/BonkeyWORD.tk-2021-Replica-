@@ -146,6 +146,20 @@ let userCommands = {
             vid: vid
         });
     },
+    "img": function(vidRaw) {
+        var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
+        this.room.emit("img", {
+            guid: this.guid,
+            vid: vid
+        });
+    },
+    "video": function(vidRaw) {
+        var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
+        this.room.emit("video", {
+            guid: this.guid,
+            vid: vid
+        });
+    },
     "backflip": function(swag) {
         this.room.emit("backflip", {
             guid: this.guid,
@@ -174,14 +188,20 @@ let userCommands = {
         this.public.color = "pope";
         this.room.updateUser(this);
     },
+    "pope_160": function() {
+        this.public.color = "pope_160";
+        this.room.updateUser(this);
+    },
+    "robert": function() {
+        this.public.color = "robert";
+        this.room.updateUser(this);
+    },
+    "dtv": function() {
+        this.public.color = "dtv";
+        this.room.updateUser(this);
+    },
     "asshole": function() {
         this.room.emit("asshole", {
-            guid: this.guid,
-            target: sanitize(Utils.argsString(arguments))
-        });
-    },
-    "owo": function() {
-        this.room.emit("owo", {
             guid: this.guid,
             target: sanitize(Utils.argsString(arguments))
         });
@@ -191,7 +211,7 @@ let userCommands = {
         this.socket.emit("vaporwave");
         this.room.emit("youtube", {
             guid: this.guid,
-            vid: "_4gl-FX2RvI"
+            vid: "aQkPcPqTq4M"
         });
     },
     "unvaporwave": function() {
