@@ -35,13 +35,13 @@ $(function() {
 		$("#page_unsupp").show();
 	}
 
-	// if (isChromeBrowser && isDesktop) {
-	// 	$(".app_showcase").append(
-	// 		'<a class="app_chrome" href="' + urlChrome + '">' +
-	// 			'<img src="./img/app/chrome.png" alt="Chrome App" />' +
-	// 		'</a>'
-	// 	);
-	// }
+	if (isChromeBrowser && isDesktop) {
+		$(".app_showcase").append(
+			'<a class="app_chrome" href="' + urlChrome + '">' +
+				'<img src="./img/app/chrome.png" alt="Chrome App" />' +
+			'</a>'
+		);
+	}
 
 	if (!isiOS) {
 		$(".app_showcase").append(
