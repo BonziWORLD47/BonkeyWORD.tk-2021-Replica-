@@ -1,3 +1,3 @@
 BonziWORLD/BonkeyWORD.tk Links:
-1. bonkeyword.tk
-2. bonkey.world
+1. https://bonkeyword.tk
+2. https://bonkey.world
